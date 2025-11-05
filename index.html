@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎂 Happy Birthday Jiya 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating Balloons -->
+  <div class="balloon" style="left: 10%; top: 20%;">🎈</div>
+  <div class="balloon" style="left: 80%; top: 40%;">🎈</div>
+  <div class="balloon" style="left: 50%; top: 60%;">🎈</div>
+
+  <!-- Music -->
+  <audio id="bdaySong" src="happybirthday.mp3"></audio>
+<audio id="page2Song" src="song2.mp3"></audio>
+<audio id="gameSong" src="gamesong.mp3"></audio>
+<audio id="endSong" src="endingsong.mp3"></audio>
+
+  <!-- Page 1 with 3D Animated Photo -->
+  <div id="page1" class="page active">
+    <h1 class="glow">🎉 Happy Birthday, Jiya! 🎉</h1>
+    <div class="photo-3d">
+      <img src="suuu2.jpg.jpg" alt="Jiya Photo">
+    </div>
+    <p>You’re not getting older — you’re just getting cooler! 😎💖</p>
+    <button onclick="startCelebration()">🎊 Start Celebration 🎊</button>
+  </div>
+
+  <!-- Page 2 -->
+
+<div id="page2" class="page">
+  <h2 class="glow">💌 Birthday Wishes 💕</h2>
+
+  <div class="note-card">
+    <p>Dear Jiya, 💖</p>
+    <p>
+      On this special day, the world shines a little brighter — just like your smile does every single day. 🌷  
+      You are a beautiful mix of kindness, chaos, and magic — someone who can turn an ordinary day into a memory worth keeping forever. ✨
+    </p>
+    <p>
+      May your life always be surrounded by laughter, friendship, and the kind of love that never fades.  
+      Keep chasing your dreams, and never forget how amazing you truly are. 💫
+    </p>
+    <p style="margin-top: 10px;">With love and endless wishes,</p>
+    <p><b>— Your Secret Well-Wisher 💐</b></p>
+  </div>
+
+  <button onclick="showPage(3)">Next: Gallery 📸</button>
+</div>
+
+
+
+  <!-- Page 3 -->
+  <div id="page3" class="page">
+    <h2>Memories With You 🖼️</h2>
+    <p>Here’s your best photo! 🌸</p>
+    <div class="gallery">
+      <img src="suuu1.jpg.jpg" alt="Jiya Memory 1">
+    </div>
+    <button onclick="showPage(4)">Next: Games 🎮</button>
+  </div>
+
+  <!-- Page 4 -->
+  <div id="page4" class="page">
+    <h2>Mini Birthday Games 🎯</h2>
+    <div class="game">
+      <h3>🎲 Guess the Number</h3>
+      <input type="number" id="guessInput" min="1" max="10" placeholder="1–10">
+      <button onclick="checkGuess()">Guess!</button>
+      <p id="guessResult"></p>
+    </div>
+
+    <div class="game">
+      <h3>✋ Rock Paper Scissors</h3>
+      <button onclick="rps('rock')">🪨</button>
+      <button onclick="rps('paper')">📄</button>
+      <button onclick="rps('scissors')">✂️</button>
+      <p id="rpsResult"></p>
+    </div>
+
+    <div class="game">
+      <h3>💖 Click the Heart!</h3>
+      <button onclick="startHeartGame()">Start</button>
+      <p id="heartArea"></p>
+      <p id="heartScore"></p>
+    </div>
+ 
+    <div class="game">
+  <h3>🧠 Memory Match Game</h3>
+  <p>Click two emojis — match the same ones to win!</p>
+  <div id="memoryGame" style="font-size:2em;"></div>
+  <p id="memoryResult"></p>
+  <button onclick="startMemoryGame()">Start Memory Game</button>
+  </div>
+
+<div class="game">
+  <h3>⚡ Quick Click Challenge</h3>
+  <p>Click the button as many times as you can in 5 seconds!</p>
+  <button id="clickButton" onclick="countClicks()">Click Me!</button>
+  <p id="clickCount"></p>
+</div>
+
+    <button onclick="showPage(5)">Next: The Big Surprise 🎁</button>
+  </div>
+
+  <!-- Page 5 -->
+  <div id="page5" class="page">
+    <h2 class="glow">🌸 The Beautiful Ending 🌸</h2>
+    <p class="surprise">Dear Jiya,</p>
+    <p>
+      You are the sparkle that makes every day brighter ✨,<br>
+      The laughter that turns silence into music 🎶,<br>
+      And the heart that makes this world so much warmer 💖.
+    </p>
+    <p>
+      On your special day, may all your dreams fly high like balloons in the sky 🎈,<br>
+      and may happiness follow you wherever you go 💫.
+    </p>
+
+    <img src="suuu2.jpg.jpg" alt="Beautiful Jiya" style="width:200px;border-radius:50%;box-shadow:0 0 15px #ff69b4;margin-top:15px;">
+    <p style="margin-top: 25px; font-size: 1.2em; color: #ff69b4;">Made with love, laughter, and a little mischief 😜💐</p>
+    <h3 style="color:#ff1493;">Now for your funny surprise 😏👇</h3>
+    <button onclick="rickroll()">🎵 Click for Your Final Gift 🎵</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
